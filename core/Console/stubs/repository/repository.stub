@@ -1,0 +1,37 @@
+<?php
+
+namespace DummyNamespace;
+
+use Core\Application\Repository\Repository;
+use Illuminate\Http\Request;
+use DummyFullModelClass;
+
+class DummyClass extends Repository
+{
+    /**
+     * The property on class instances.
+     *
+     * @var \Illuminate\Database\Eloquent\Model
+     */
+    protected $model;
+
+    /**
+     * The Request instance.
+     *
+     * @var \Illuminate\Http\Request
+     */
+    protected $request;
+
+    /**
+     * Constructor to bind model to a repository.
+     *
+     * @param \Illuminate\Database\Eloquent\Model $DummyModelVariable
+     * @param \Illuminate\Http\Request $user
+     */
+    public function __construct(DummyModelClass $DummyModelVariable, Request $request)
+    {
+        $this->model = $DummyModelVariable;
+
+        $this->request = $request;
+    }
+}

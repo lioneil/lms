@@ -1,0 +1,60 @@
+.dovetail-app {
+  .dt-sidebar {
+    .v-list-group__items {
+      a.v-list-item {
+        padding-left: 56px;
+      }
+    }
+
+    .v-list--nav {
+      padding-left: 13px;
+      padding-right: 13px;
+
+      .v-list-item {
+        border-radius: var(--global-radius);
+        padding-left: 19px;
+        padding-right: 19px;
+
+        &__icon {
+          &:first-child {
+            margin-right: 16px;
+          }
+
+          .v-icon {
+            font-size: var(--font-base);
+          }
+        }
+
+        &:not(.v-list-item--active):not(.theme--dark) {
+          .v-list-item__title {
+            color: var(--text);
+          }
+
+          .v-icon {
+            color: var(--text);
+          }
+        }
+      }
+    }
+
+    .v-subheader {
+      color: var(--text-muted);
+      padding-left: 19px;
+      padding-right: 19px;
+    }
+  }
+
+  &.theme--light {
+    .v-navigation-drawer--fixed {
+      .v-navigation-drawer__border {
+        background-color: var(--sidebar-border);
+      }
+    }
+  }
+
+  &.theme--dark {
+    .v-navigation-drawer {
+      background-color: var(--sidebar-bg-dark);
+    }
+  }
+}

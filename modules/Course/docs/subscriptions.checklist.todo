@@ -1,0 +1,32 @@
+=====================
+◈ Course/Subscription
+=====================
+
+UNIT TEST:
+
+  CourseService via Models/Course:
+    ✔ it can return a paginated list of subscribed courses @listSubcribed() @done (19-07-17 16:20)
+    ✔ it can subscribe to a given course @subscribe @done (19-07-17 16:37)
+    ✔ it can unsubscribe to a subscribed course @unsubscribe @done (19-07-17 16:37)
+
+  Events/UserHasSubscribedToACourse:
+    ✔ @done (19-07-17 17:57)
+
+--- ✄ -----------------------
+
+FEATURE TEST:
+
+  Super User:
+    ✔ a super user can view a paginated list of owned subscribed courses @done (19-07-18 15:54)
+    ✘ a super user can view a paginated list of others subscribed courses @cancelled (19-07-18 16:23)
+    ✔ a super user can subscribe to a published course @done (19-07-18 17:09)
+    ✔ a super user cannot subcribe to an unpublished course @done (19-07-18 17:09)
+    ✔ a super user can unsubscribe from a subscribed course @done (19-07-18 17:09)
+  User:
+    ✔ a user can view a paginated list of owned subscribed courses @done (19-07-18 18:21)
+    ✘ a user cannot view a paginated list of others subscribed courses @cancelled (19-07-18 18:21)
+    ✔ a user can subscribe to a published course @done (19-07-19 14:44)
+    ✔ a user cannot subcribe to an unpublished course @done (19-07-19 15:03)
+    ✔ a user can unsubscribe from a subscribed course @done (19-07-19 15:03)
+  Events/UserHasSubscribedToACourse:
+    ☐

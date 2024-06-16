@@ -1,0 +1,69 @@
+{
+  "name": "Dovetail",
+  "code": "dovetail",
+  "description": "Single-Page Application. Semantic, slick, and modern. Dovetail theme, everyone.",
+  "preview": {
+    "img": "preview.png",
+    "credit": ""
+  },
+  "spa": true,
+  "author": {
+  "name": "Princess Ellen Alto",
+  "email": "altoprincessellen@gmail.com"
+  },
+  "colors": {
+    "light": {
+      "primary": "#2c7be5",
+      "secondary": "#e56e37",
+      "accent": "#f39e2b",
+      "success": "#009688",
+      "info": "#00b8d6",
+      "warning": "#F6C343",
+      "error": "#f44336",
+      "light": "#f8f9fa",
+      "dark": "#152e4d",
+      "text": "#12263f",
+      "card": "#ffffff",
+      "sidebar": "#ffffff",
+      "bar": "#f9fbfd",
+      "workspace": "#ffffff",
+      "muted": "#95aac9",
+      "link": "#868e96",
+      "soft-success": "#ccf7e5",
+      "soft-error": "#fad7dd",
+      "soft-info": "#d7eff6",
+      "soft-warning": "#fdf3d9",
+      "selects": "#edf2f9",
+      "field": "#d2ddec",
+      "sheet": "#ffffff",
+      "theme": "#ffffff",
+      "section": "#eef3f7"
+    },
+    "dark": {
+      "primary": "#2c7be5",
+      "secondary": "#e56e37",
+      "accent": "#f39e2b",
+      "success": "#009688",
+      "info": "#00b8d6",
+      "warning": "#ffda3e",
+      "error": "#f44336",
+      "light": "#f8f9fa",
+      "dark": "#152e4d",
+      "text": "#ffffff",
+      "card": "#ffffff",
+      "sidebar": "#152e4d",
+      "bar": "#12263f",
+      "workspace": "#12263f",
+      "muted": "#95aac9",
+      "link": "#868e96",
+      "soft-success": "#ccf7e5",
+      "soft-error": "#fad7dd",
+      "soft-info": "#d7eff6",
+      "soft-warning": "#fdf3d9",
+      "selects": "#12263f",
+      "sheet": "#152e4d",
+      "theme": "#152e4d",
+      "section": "#152e4d"
+    }
+  }
+}

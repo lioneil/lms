@@ -1,0 +1,23 @@
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.sticky-w-space {
+  position: sticky;
+  top: 84px;
+  z-index: 1;
+}
+
+// Full Width
+.dt-full-width {
+  background-color: var(--workspace-bg);
+  height: 100vh;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}

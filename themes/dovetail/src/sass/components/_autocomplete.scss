@@ -1,0 +1,15 @@
+.v-menu__content {
+  &.menuable__content__active {
+    &.theme--light {
+      &.v-autocomplete__content {
+        background: var(--light);
+      }
+    }
+
+    &.theme--dark {
+      &.v-autocomplete__content {
+        background: var(--dark);
+      }
+    }
+  }
+}

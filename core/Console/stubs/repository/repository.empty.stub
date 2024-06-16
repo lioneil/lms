@@ -1,0 +1,23 @@
+<?php
+
+namespace DummyNamespace;
+
+use Core\Application\Repository\Repository;
+use Illuminate\Http\Request;
+
+class DummyClass extends Repository
+{
+    /**
+     * The property on class instances.
+     *
+     * @var \Illuminate\Database\Eloquent\Model
+     */
+    protected $model;
+
+    /**
+     * The Request instance.
+     *
+     * @var \Illuminate\Http\Request
+     */
+    protected $request;
+}

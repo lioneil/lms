@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "declaration-no-important": true,
+    "color-hex-length": "long",
+    "color-hex-case": "lower",
+    "unit-whitelist": ["em", "rem", "%", "s"]
+  }
+}

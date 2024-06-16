@@ -1,0 +1,8 @@
+@import '~@mdi/font/scss/materialdesignicons';
+@import '~typeface-dm-sans/index.css';
+
+$mdi-font-path: "../fonts/vendor/@mdi" !default;
+
+.mdi-spin::before {
+  animation: mdi-spin 0.5s ease-in infinite;
+}

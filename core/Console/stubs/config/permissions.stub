@@ -1,0 +1,112 @@
+<?php
+/**
+ *------------------------------------------------------------------------------
+ * Permissions Array
+ *------------------------------------------------------------------------------
+ *
+ * Here we define our permissions that you can attach to roles.
+ *
+ * These permissions corresponds to a counterpart
+ * route (found in <this module>/routes/<route-files>.php).
+ * All permissionable routes should have a `name` (e.g. 'roles.store')
+ * for the role authentication middleware to work.
+ *
+ */
+return [
+    /**
+     *--------------------------------------------------------------------------
+     * DummySingularText Permissions
+     *--------------------------------------------------------------------------
+     *
+     */
+    'index-dummy-plural-name' => [
+        'name' =>  'index-dummy-plural-name',
+        'code' => 'dummy-plural-name.index',
+        'description' => 'Ability to view list of dummy-plural-name',
+        'group' => 'dummy-singular-name',
+    ],
+    'show-dummy-singular-name' => [
+        'name' => 'show-dummy-singular-name',
+        'code' => 'dummy-plural-name.show',
+        'description' => 'Ability to show a single dummy-singular-name',
+        'group' => 'dummy-singular-name',
+    ],
+    'create-dummy-singular-name' => [
+        'name' => 'create-dummy-singular-name',
+        'code' => 'dummy-plural-name.create',
+        'description' => 'Ability to create new dummy-singular-name',
+        'group' => 'dummy-singular-name',
+    ],
+    'store-dummy-singular-name' => [
+        'name' => 'store-dummy-singular-name',
+        'code' => 'dummy-plural-name.store',
+        'description' => 'Ability to save the dummy-singular-name',
+        'group' => 'dummy-singular-name',
+    ],
+    'edit-dummy-singular-name' => [
+        'name' => 'edit-dummy-singular-name',
+        'code' => 'dummy-plural-name.edit',
+        'description' => 'Ability to view the edit form',
+        'group' => 'dummy-singular-name',
+    ],
+    'update-dummy-singular-name' => [
+        'name' => 'update-dummy-singular-name',
+        'code' => 'dummy-plural-name.update',
+        'description' => 'Ability to update the dummy-singular-name',
+        'group' => 'dummy-singular-name',
+    ],
+    'destroy-dummy-singular-name' => [
+        'name' => 'destroy-dummy-singular-name',
+        'code' =>  'dummy-plural-name.destroy',
+        'description' => 'Ability to move the dummy-singular-name to trash',
+        'group' => 'dummy-singular-name',
+    ],
+    'delete-dummy-singular-name' => [
+        'name' => 'delete-dummy-singular-name',
+        'code' =>  'dummy-plural-name.delete',
+        'description' => 'Ability to permanently delete the dummy-singular-name',
+        'group' => 'dummy-singular-name',
+    ],
+    'trashed-dummy-plural-name' => [
+        'name' => 'trashed-dummy-plural-name',
+        'code' =>  'dummy-plural-name.trashed',
+        'description' => 'Ability to view the list of all trashed dummy-plural-name',
+        'group' => 'dummy-singular-name',
+    ],
+    'restore-dummy-singular-name' => [
+        'name' => 'restore-dummy-singular-name',
+        'code' => 'dummy-plural-name.restore',
+        'description' => 'Ability to restore the dummy-singular-name from trash',
+        'group' => 'dummy-singular-name',
+    ],
+
+    /**
+     *--------------------------------------------------------------------------
+     * Limited Access Policies
+     *--------------------------------------------------------------------------
+     * The policy stated below will limit the users to only interact with
+     * resources they created. Using this policy, the resource will usually have
+     * a `user_id` field defined. A Policy Class is also required to check
+     * authorization.
+     *
+     * E.g.
+     *  1. User1 will only be able to edit/delete their own created pages.
+     *  2. User1 will not be able to edit User2's created pages.
+     *  3. User1 will not be able to delete User2's created pages.
+     *  4. User1 will be able to view other users created pages. Although this can
+     *     be set to be otherwise. It will depend on the Policy file.
+     */
+    'unrestricted-dummy-singular-name-access' => [
+        'name' => 'unrestricted-dummy-singular-name-access',
+        'code' => 'dummy-plural-name.unrestricted',
+        'description' => 'Ability to edit and delete all dummy-plural-name even if the user is not the creator of the dummy-singular-name.',
+        'group' => 'dummy-singular-name',
+    ],
+
+    'owned-dummy-plural-name' => [
+        'name' => 'owned-dummy-plural-name',
+        'code' => 'dummy-plural-name.owned',
+        'description' => 'Ability to manage only owned dummy-singular-name.',
+        'group' => 'dummy-singular-name',
+    ],
+];

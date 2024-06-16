@@ -1,0 +1,17 @@
+.card {
+  // @extend .card;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.08);
+  font-size: 0.0625rem;
+  border: none;
+  border-radius: var(--card-border-radius);
+
+  &-header {
+    font-weight: var(--card-header-font-weight);
+  }
+
+  &-footer {
+    color: #ffffff;
+    border: none;
+    background-color: var(--card-cap-bg);
+  }
+}

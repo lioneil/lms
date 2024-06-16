@@ -1,0 +1,36 @@
+<?php
+
+namespace DummyNamespace;
+
+use Core\Application\Service\Service;
+use Illuminate\Http\Request;
+use DummyModuleName\Models\DummyModuleName;
+
+class DummyClass extends Service implements DummyClassInterface
+{
+    /**
+     * The property on class instances.
+     *
+     * @var \Illuminate\Database\Eloquent\Model
+     */
+    protected $model;
+
+    /**
+     * The Request instance.
+     *
+     * @var \Illuminate\Http\Request
+     */
+    protected $request;
+
+    /**
+     * Constructor to bind model to a repository.
+     *
+     * @param \DummyModuleName\Models\DummyModuleName $model
+     * @param \Illuminate\Http\Request $request
+     */
+    public function __construct(DummyModuleName $model, Request $request)
+    {
+        $this->model = $model;
+        $this->request = $request;
+    }
+}

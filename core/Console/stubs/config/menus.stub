@@ -1,0 +1,18 @@
+<?php
+
+return [
+    /**
+     *--------------------------------------------------------------------------
+     * Menu Location
+     *--------------------------------------------------------------------------
+     *
+     * Menu locations are the menus in any sections in templates specified by
+     * the app or the user.
+     *
+     */
+    'dummy-singular-name' => [
+        'name' => __('DummySingularText'),
+        'icon' => 'mdi mdi-menu',
+        'description' => __('The description of the menu location.'),
+    ],
+];

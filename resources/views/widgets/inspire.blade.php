@@ -1,0 +1,1 @@
+<blockquote>@lang($quote)</blockquote>

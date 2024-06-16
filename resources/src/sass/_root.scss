@@ -1,0 +1,18 @@
+:root {
+  // Global
+  --border: none;
+
+  // Card
+  --card-bg: #{$card-bg};
+  --card-border-width: #{$card-border-width};
+  --card-border-radius: #{$border-radius};
+  --card-cap-bg: #{$card-cap-bg};
+  --card-header-font-weight: #{$card-header-font-weight};
+
+  // Workspace
+  --workspace-bg: #{$workspace-bg};
+
+  // Sidebar
+  --sidebar-bg: #{$sidebar-bg};
+  --sidebar-color: #{$sidebar-color};
+}

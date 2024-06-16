@@ -1,0 +1,88 @@
+.dt-editor {
+  img {
+    width: 100%;
+  }
+
+  .ck {
+    .ck-editor {
+      &__main > .ck-editor__editable:not(.ck-focused) {
+        border-bottom: 1px solid var(--field-light);
+        border-bottom-left-radius: var(--card-border-radius);
+        border-bottom-right-radius: var(--card-border-radius);
+        border-left: 1px solid var(--field-light);
+        border-right: 1px solid var(--field-light);
+        border-top: 0;
+      }
+    }
+
+    &-content {
+      min-height: 500px;
+
+      ul, ol {
+        margin-left: 2rem;
+
+        li {
+          font-size: var(--font-size-base);
+          line-height: 32px;
+        }
+      }
+    }
+
+    .ck-toolbar {
+      background: var(--workspace-bg);
+      border-top-left-radius: var(--card-border-radius) !important;
+      border-top-right-radius: var(--card-border-radius) !important;
+      border: 1px solid var(--field-light) !important;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+  }
+}
+
+.fullwidth {
+  .ck {
+    .ck-editor {
+      &__main > .ck-editor__editable:not(.ck-focused) {
+        border: 0;
+      }
+    }
+
+    .ck-toolbar {
+      border-radius: 0 !important;
+    }
+  }
+}
+
+.theme--dark {
+  .ck {
+    .ck-editor {
+      &__main > .ck-editor__editable:not(.ck-focused) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+        border-bottom-left-radius: rgba(255, 255, 255, 0.24);
+        border-bottom-right-radius: rgba(255, 255, 255, 0.24);
+        border-left: 1px solid rgba(255, 255, 255, 0.24);
+        border-right: 1px solid rgba(255, 255, 255, 0.24);
+        border-top: 0;
+      }
+    }
+
+    .ck-content {
+      background: transparent !important;
+    }
+
+    .ck-toolbar {
+      background: var(--sidebar-bg-dark);
+      border-top-left-radius: rgba(255, 255, 255, 0.24) !important;
+      border-top-right-radius: rgba(255, 255, 255, 0.24) !important;
+      border: 1px solid rgba(255, 255, 255, 0.24) !important;
+
+      .ck-button {
+        color: var(--white);
+
+        &:hover {
+          background: var(--toolbar-bg-dark);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.dovetail-app {
+  .theme--dark {
+    .v-skeleton-loader {
+      &__list-item-avatar-two-line {
+        background: var(--sheet);
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.theme--dark {
+  .v-sheet {
+    background: var(--sidebar-bg-dark);
+  }
+}
+
+.dt-sheet.criteria {
+  z-index: 5;
+
+  .v-slide-group__next,
+  .v-slide-group__prev {
+    flex: 0 1 32px;
+    min-width: 32px;
+  }
+}

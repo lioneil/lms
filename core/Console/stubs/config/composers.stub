@@ -1,0 +1,13 @@
+<?php
+
+return [
+    /**
+     * Specify the view paths the variable
+     * will appear and the composer class.
+     *
+     */
+    [
+        'appears' => ['*'],
+        'class' => DummyText::class,
+    ],
+];

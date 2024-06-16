@@ -1,0 +1,6 @@
+{
+  "name": "Template",
+  "description": "Manage template resources like emails, UI components, and theme layouts for the application",
+  "author": "Pluma",
+  "version": "1.0.0"
+}

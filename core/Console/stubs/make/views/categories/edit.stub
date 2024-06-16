@@ -1,0 +1,9 @@
+@extends('Theme::categories.edit')
+
+@section('head:title', __('Titles'))
+
+@section('page:title', __('Titles'))
+
+@section('form:title', __('Edit Title'))
+
+@section('table:title', __('All Titles'))

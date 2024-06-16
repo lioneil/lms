@@ -1,0 +1,29 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "order/order": [
+      [
+        "custom-properties",
+        "declarations"
+      ],
+      {
+        "disableFix": true
+      },
+    ],
+    "order/properties-alphabetical-order": true,
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "declaration-no-important": true,
+    "unit-whitelist": ["em", "rem", "%", "s", "deg", "px", "vh", "vw"],
+    "color-no-hex": true,
+    "number-leading-zero": "always",
+    "color-named": "never",
+    "no-invalid-double-slash-comments": true,
+    "comment-no-empty": true,
+    "comment-empty-line-before": "always",
+    "comment-whitespace-inside": "always",
+  }
+}

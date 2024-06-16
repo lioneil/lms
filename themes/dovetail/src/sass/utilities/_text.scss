@@ -1,0 +1,111 @@
+.theme--light {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: var(--text);
+  }
+}
+
+.theme--dark {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: var(--white);
+  }
+}
+
+.text {
+  &--truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 150px;
+  }
+
+  &-truncate-section-display-md {
+    .section-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: bottom;
+      white-space: nowrap;
+      width: 34rem;
+    }
+  }
+
+  &-truncate-section-display-xs {
+    .section-text {
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: bottom;
+      white-space: nowrap;
+      width: 15rem;
+    }
+  }
+
+  &-truncate-section {
+    .section-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: bottom;
+      white-space: nowrap;
+      width: 6rem;
+    }
+  }
+
+  &--decoration {
+    &-none {
+      text-decoration: none;
+    }
+  }
+
+  &--ellipsis {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  &--ellipsis-1 {
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    // width: 14rem;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+}
+
+.t {
+  &-d {
+    &-none {
+      text-decoration: none;
+    }
+
+    &-hover-lined {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.dt-overline {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1666666667em;
+  line-height: 1rem;
+  text-transform: uppercase;
+}

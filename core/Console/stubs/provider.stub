@@ -1,0 +1,38 @@
+<?php
+
+namespace DummyNamespace;
+
+use DummyModuleName\Services\DummyModuleNameService;
+use DummyModuleName\Services\DummyModuleNameServiceInterface;
+use Core\Providers\BaseServiceProvider;
+
+class DummyClass extends BaseServiceProvider
+{
+    /**
+     * Array of providers to register.
+     *
+     * @var array
+     */
+    protected $providers = [];
+
+    /**
+     * Register any service class with its interface.
+     *
+     * @return void
+     */
+    protected function registerServiceBindings()
+    {
+        $this->app->bind(DummyModuleNameServiceInterface::class, DummyModuleNameService::class);
+    }
+
+    /**
+     * Get the base directory.
+     *
+     * @param  string $path
+     * @return string
+     */
+    protected function directory(string $path = '')
+    {
+        return dirname(__DIR__).DIRECTORY_SEPARATOR.$path;
+    }
+}

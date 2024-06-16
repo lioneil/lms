@@ -1,0 +1,36 @@
+.dovetail-app {
+  .v-btn {
+    font-size: var(--font-size-base);
+    letter-spacing: 0;
+    text-transform: capitalize;
+
+    &__content {
+      font-size: var(--font-size-base);
+    }
+
+    .dt-btn-divider {
+      border-color: var(--btn-divider);
+    }
+  }
+
+  .dt-link {
+    color: var(--link);
+
+    i {
+      color: var(--link);
+    }
+
+    &:hover,
+    &:hover i {
+      color: var(--primary);
+    }
+  }
+}
+
+.theme--light {
+  .v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+    background: var(--workspace-bg);
+    border: 1px solid var(--button-border-color);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  }
+}

@@ -1,0 +1,13 @@
+.dovetail-app {
+  .border {
+    &-dashed {
+      border-color: var(--link) !important;
+      border-style: dashed !important;
+      border-width: 1px !important;
+
+      &:hover {
+        border-color: var(--primary) !important;
+      }
+    }
+  }
+}

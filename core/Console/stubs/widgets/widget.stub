@@ -1,0 +1,43 @@
+<?php
+
+namespace DummyNamespace;
+
+use Core\Application\Widget\AbstractWidget;
+
+class DummyClass extends AbstractWidget
+{
+    /**
+     * The alias of the widget when calling
+     * from the widget container.
+     *
+     * @var string
+     */
+    protected $alias = 'dummy:alias';
+
+    /**
+     * The widget description.
+     *
+     * @var string
+     */
+    protected $description = 'The widget description';
+
+    /**
+     * The interval in seconds
+     * before reloading content.
+     *
+     * False means the widget will not reload.
+     *
+     * @var integer|float|boolean
+     */
+    protected $intervals = 5000;
+
+    /**
+     * Render the widget into the view.
+     *
+     * @return string|null
+     */
+    public function handle()
+    {
+        return view('dummy:view')->with($this->attributes);
+    }
+}

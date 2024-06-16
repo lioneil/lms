@@ -1,0 +1,52 @@
+.loader {
+  align-items: center;
+  background: va(--white);
+  display: flex;
+  height: var(--full-height);
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.3s linear;
+  width: 100%;
+  z-index: 9999;
+}
+
+@keyframes s_rotate1 {
+  0% {
+    -webkit-transform: rotate (-360deg);
+  }
+}
+
+@keyframes s_rotate2 {
+  0%,
+  50% {
+    -webkit-transform: rotate (-360deg);
+  }
+}
+
+@keyframes s_grow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.spinner {
+  animation: s_rotate1 4.5s infinite linear;
+  height: 2rem;
+  margin: 8rem auto;
+  width: 2rem;
+
+  svg {
+    animation: s_rotate2 2s infinite linear;
+  }
+
+  path {
+    animation: s_grow 1s alternate infinite linear;
+    fill: none;
+    stroke: var(--primary);
+    stroke-dasharray: 600;
+    stroke-dashoffset: 580;
+    stroke-width: 18;
+  }
+}

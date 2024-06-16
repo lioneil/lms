@@ -1,0 +1,31 @@
+{
+  "name": "Default",
+  "code": "default",
+  "description": "The default theme for Yggdrasil.",
+  "preview": {
+    "hintpath": "Default::themes.thumbnail",
+    "img": "preview.png",
+    "credit": "Photo by Amarnath Tade on Unsplash",
+    "url": "https://unsplash.com/@amarnathtade"
+  },
+  "author": {
+    "name": "Princess Ellen Alto",
+    "email": "altoprincessellen@gmail.com"
+  },
+  "colors": {
+    "primary": "#2c7be5",
+    "secondary": "#f9fafb",
+    "accent": "#ffffff",
+    "success": "#86d067",
+    "info": "#00b8d6",
+    "warning": "#ffda3e",
+    "danger": "#f44336",
+    "light": "#f8f9fa",
+    "dark": "#343a40",
+    "text": "#333333",
+    "card": "#ffffff",
+    "sidebar": "#f7f7f7",
+    "muted": "#95aac9",
+    "workspace": "#f7f7f7"
+  }
+}

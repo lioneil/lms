@@ -1,0 +1,27 @@
+.v-app-bar.v-app-bar--hide-shadow {
+  box-shadow: var(--box-shadow);
+}
+
+.dt-app-bar-nav-icon {
+  position: absolute;
+}
+
+.theme--dark {
+  &.v-app-bar {
+    &.v-toolbar {
+      &.v-sheet {
+        background: var(--toolbar-bg-dark);
+      }
+    }
+  }
+}
+
+.theme--light {
+  &.v-app-bar {
+    &.v-toolbar {
+      &.v-sheet {
+        background: var(--white);
+      }
+    }
+  }
+}

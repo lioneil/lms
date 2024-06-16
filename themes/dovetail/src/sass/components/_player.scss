@@ -1,0 +1,24 @@
+.dt {
+  &-player {
+    &-video {
+      background-size: 100%;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+    }
+
+    &-scorm {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &-card {
+      &-container {
+        overflow: hidden;
+      }
+    }
+  }
+}

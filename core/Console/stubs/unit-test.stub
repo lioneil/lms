@@ -1,0 +1,27 @@
+<?php
+
+namespace DummyNamespace;
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+/**
+ * @package DummyNamespace
+ * @runTestsInSeparateProcesses
+ * @preserveGlobalState disabled
+ */
+class DummyClass extends TestCase
+{
+    /**
+     * A basic test example.
+     *
+     * @test
+     * @group  unit
+     * @return void
+     */
+    public function testExample()
+    {
+        $this->assertTrue(true);
+    }
+}

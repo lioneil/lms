@@ -1,0 +1,7 @@
+.sorter {
+  cursor: grab;
+
+  &:-moz-drag-over {
+    cursor: grabbing;
+  }
+}

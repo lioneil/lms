@@ -1,0 +1,5 @@
+{
+  "name": "Subscription",
+  "description": "A simple plans and subscriptions management module. Subscribe to or unsubscribe from any Eloquent Models.",
+  "author": "core/pluma"
+}

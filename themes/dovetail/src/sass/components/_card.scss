@@ -1,0 +1,66 @@
+.dovetail-app {
+  .dt-card-scroll {
+    overflow-y: scroll;
+  }
+
+  .v-card {
+    font-family: var(--font-family-base);
+
+    &:not(.v-card--flat):not(.v-card--outlined) {
+      box-shadow: var(--box-shadow);
+    }
+
+    &--hover:hover,
+    &.v-card--hover:hover,
+    &.v-card--hover.v-card--flat:hover {
+      // box-shadow: var(--card-box-shadow-hover) !important;
+      box-shadow: var(--card-box-shadow-hover) !important;
+    }
+
+    &.dt-card-hover-transparent:hover {
+      background: var(--white) !important;
+    }
+
+    &:not(.v-sheet--tile):not(.v-card--shaped) {
+      border-radius: var(--global-radius);
+    }
+
+    &__text,
+    &__title {
+      font-family: var(--font-family-base);
+      font-size: var(--font-size-base);
+      padding: var(--padding-base);
+      word-break: break-word;
+    }
+
+    &__actions {
+      font-family: var(--font-family-base);
+    }
+
+    &__title {
+      font-weight: 700;
+    }
+  }
+
+  &.theme--light {
+    .v-card {
+      color: var(--text);
+
+      &:not(.v-card--flat):not(.v-card--outlined) {
+        border: 1px solid var(--card-border-color);
+      }
+
+      .v-card__text {
+        color: var(--text);
+      }
+    }
+  }
+
+  &.theme--dark {
+    .v-card {
+      .v-card__title {
+        color: var(--white);
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.dovetail-app {
+  .elevation {
+    &-1 {
+      box-shadow: var(--box-shadow) !important;
+    }
+  }
+  .dt-box-shadow {
+    box-shadow: var(--dt-box-shadow);
+  }
+}

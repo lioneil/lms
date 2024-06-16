@@ -1,0 +1,99 @@
+{
+  "name": "pluma/pluma",
+  "description": "A PHP Management System Framework",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "John Lioneil Dionisio",
+      "email": "john.dionisio1@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.2",
+    "barryvdh/laravel-httpcache": "^0.3.6",
+    "codrasil/closurable": "^1.1",
+    "codrasil/tree": "^1.0",
+    "doctrine/dbal": "^2.9",
+    "fideloper/proxy": "^4.1",
+    "laravel/framework": "5.8.*",
+    "laravel/nexmo-notification-channel": "^2.0",
+    "laravel/passport": "^7.5.1",
+    "laravel/scout": "^7.1",
+    "laravel/slack-notification-channel": "^2.0",
+    "laravel/tinker": "^1.0",
+    "laravolt/avatar": "^2.2",
+    "maatwebsite/excel": "^3.1",
+    "ralouphie/mimey": "^2.1",
+    "teamtnt/laravel-scout-tntsearch-driver": "^7.0",
+    "wikimedia/composer-merge-plugin": "^1.4"
+  },
+  "require-dev": {
+    "barryvdh/laravel-debugbar": "^3.2",
+    "beyondcode/laravel-dump-server": "^1.2",
+    "filp/whoops": "^2.4",
+    "fzaninotto/faker": "^1.8",
+    "mockery/mockery": "^1.2",
+    "nunomaduro/collision": "^3.0",
+    "phpunit/phpunit": "^7.5",
+    "sempro/phpunit-pretty-print": "^1.2"
+  },
+  "autoload": {
+    "classmap": [
+      "core",
+      "modules",
+      "database/seeds",
+      "database/factories"
+    ],
+    "psr-4": {
+      "Core\\": "core/",
+      "User\\": "core/modules/User/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": []
+    },
+    "merge-plugin": {
+      "include": [
+        "composer.local.json",
+        "core/composer.json",
+        "core/modules/*/composer.json",
+        "modules/*/composer.json"
+      ],
+      "recurse": true,
+      "replace": false,
+      "ignore-duplicates": true,
+      "merge-dev": true,
+      "merge-extra": false,
+      "merge-extra-deep": false,
+      "merge-scripts": false
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php console key:generate --ansi"
+    ],
+    "code:review": [
+      "Composer\\Config::disableProcessTimeout",
+      "phpcs --standard=./ruleset.xml modules/ --colors",
+      "./vendor/bin/phpunit --testsuite API --configuration phpunit.xml --colors=always"
+    ]
+  }
+}

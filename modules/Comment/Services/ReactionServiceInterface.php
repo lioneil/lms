@@ -1,0 +1,10 @@
+<?php
+
+namespace Comment\Services;
+
+use Core\Application\Service\ServiceInterface;
+
+interface ReactionServiceInterface extends ServiceInterface
+{
+    // Put all required methods here.
+}

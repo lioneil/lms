@@ -1,0 +1,13 @@
+src/dist
+src/build
+src/**/*.ttf
+src/**/_border.scss
+src/**/_breakpoint.scss
+src/**/_card.scss
+src/**/_comment.scss
+src/**/_editor.scss
+src/**/_elevation.scss
+src/**/_reset.scss
+src/**/_table.scss
+src/**/_variables.old.scss
+src/**/_variables.scss

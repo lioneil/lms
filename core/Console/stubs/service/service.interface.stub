@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Core\Application\Service\ServiceInterface;
+
+interface DummyClass extends ServiceInterface
+{
+    // Put all required methods here.
+}

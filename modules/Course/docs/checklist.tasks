@@ -1,0 +1,106 @@
+=============================================================================================
+◈ Unit Testing
+=============================================================================================
+
+**[Module]ServiceTest Class**
+it:
+    **Browse**
+        ✔ $service->list()                              => it_can_return_a_paginated_list_of_courses @done (19-07-09 15:22)
+        ✔ $service->listTrashed()                       => it_can_return_a_paginated_list_of_trashed_courses @done (19-07-09 15:22)
+    **Read**
+        ✔ $service->findOrFail(int $id)                 => it_can_find_and_return_an_existing_course @done (19-07-09 15:22)
+        ✔ $service->findOrFail(int $id)                 => it_will_abort_to_404_when_a_course_does_not_exist @done (19-07-09 15:22)
+    **Edit**
+        ✔ $service->update(int $id, array $attributes)  => it_can_update_an_existing_course @done (19-07-09 15:22)
+        ✔ $service->restore(mixed $id)                  => it_can_restore_a_soft_deleted_course @done (19-07-09 15:22)
+        ✔ $service->restore(mixed $id)                  => it_can_restore_multiple_soft_deleted_courses @done (19-07-09 15:22)
+    **Add**
+        ✔ $service->store(array $attributes)            => it_can_store_a_course_to_database @done (19-07-09 15:22)
+    **Delete**
+        ✔ $service->destroy(mixed $id)                  => it_can_soft_delete_an_existing_course @done (19-07-09 15:22)
+        ✔ $service->destroy(mixed $id)                  => it_can_soft_delete_multiple_existing_courses @done (19-07-09 15:22)
+        ✔ $service->delete(mixed $id)                   => it_can_permanently_delete_a_soft_deleted_course @done (19-07-09 15:22)
+        ✔ $service->delete(mixed $id)                   => it_can_permanently_delete_multiple_soft_deleted_courses @done (19-07-09 15:22)
+    **Rules**
+        ✔ $service->rules($id = null)                   => it_should_return_an_array_of_rules @done (19-07-09 15:22)
+        ✔ $service->messages()                          => it_should_return_an_array_of_messages @done (19-07-09 15:22)
+    **Authorization**
+        ✔ $service->authorize(Model|int $model)         => it_can_check_if_user_is_authorized_to_the_course @done (19-07-09 15:22)
+        ✔ $service->authorize(Model|int $model)         => it_can_check_if_user_has_unrestricted_authorization_to_interact_with_courses @done (19-07-09 15:22)
+
+
+---- ✄ -----------------------
+
+
+=============================================================================================
+◈ Feature Testing
+=============================================================================================
+
+a_super_user:
+    **Browse**
+        ✔ courses.index   => a_super_user_can_view_a_paginated_list_of_all_courses @done (19-07-09 15:22)
+        ✔ courses.trashed => a_super_user_can_view_a_paginated_list_of_all_trashed_courses @done (19-07-09 15:22)
+    **Read**
+        ✔ courses.show    => a_super_user_can_visit_a_course_page @done (19-07-09 15:26)
+    **Edit**
+        ✔ courses.edit    => a_super_user_can_visit_the_edit_course_page @done (19-07-09 15:29)
+        ✔ courses.update  => a_super_user_can_update_a_course @done (19-07-09 15:35)
+        ✔ courses.restore => a_super_user_can_restore_a_course @done (19-07-09 15:45)
+        ✔ courses.restore => a_super_user_can_restore_multiple_courses @done (19-07-09 15:54)
+    **Add**
+        ✔ courses.create  => a_super_user_can_visit_the_create_course_page @done (19-07-09 15:56)
+        ✔ courses.store   => a_super_user_can_store_a_course_to_database @done (19-07-09 15:57)
+    **Delete**
+        ✔ courses.destroy => a_super_user_can_soft_delete_a_course @done (19-07-09 15:58)
+        ✔ courses.destroy => a_super_user_can_soft_delete_multiple_courses @done (19-07-09 16:11)
+        ✔ courses.delete  => a_super_user_can_permanently_delete_a_course @done (19-07-09 16:36)
+        ✔ courses.delete  => a_super_user_can_permanently_delete_multiple_courses @done (19-07-09 16:52)
+
+---- ✄ -----------------------
+
+a_user:
+    **Browse**
+        ✔ courses.index   => a_user_can_only_view_their_owned_paginated_list_of_all_courses @done (19-07-09 17:41)
+        ✔ courses.trashed => a_user_can_only_view_their_owned_paginated_list_of_all_trashed_courses @done (19-07-09 17:41)
+    **Read**
+        ✔ courses.show    => a_user_can_visit_owned_course_page @done (19-07-09 17:48)
+        ✔ courses.show    => a_user_can_visit_any_course_page @done (19-07-09 17:52)
+        ✔ courses.show    => a_user_cannot_edit_others_courses_on_the_show_course_page @done (19-07-09 17:58)
+    **Edit**
+        ✔ courses.edit    => a_user_can_only_visit_their_owned_edit_course_page @done (19-07-09 18:02)
+        ✔ courses.edit    => a_user_cannot_visit_others_edit_course_page @done (19-07-09 18:02)
+        ✔ courses.update  => a_user_can_only_update_their_owned_courses @done (19-07-09 18:04)
+        ✔ courses.update  => a_user_cannot_update_others_courses @done (19-07-09 18:04)
+        ✔ courses.restore => a_user_can_only_restore_owned_course @done (19-07-09 18:09)
+        ✔ courses.restore => a_user_can_only_restore_owned_multiple_courses @done (19-07-09 18:09)
+        ✔ courses.restore => a_user_cannot_restore_others_course @done (19-07-09 19:38)
+        ✔ courses.restore => a_user_cannot_restore_others_multiple_courses @done (19-07-09 19:38)
+    **Add**
+        ✔ courses.create  => a_user_can_visit_the_create_course_page @done (19-07-10 03:12)
+        ✔ courses.store   => a_user_can_store_a_course_to_database @done (19-07-10 03:12)
+    **Delete**
+        ✔ courses.destroy => a_user_can_only_soft_delete_owned_course @done (19-07-10 09:52)
+        ✔ courses.destroy => a_user_can_only_multiple_soft_delete_owned_courses @done (19-07-10 10:23)
+        ✔ courses.destroy => a_user_cannot_soft_delete_others_course @done (19-07-10 10:28)
+        ✔ courses.destroy => a_user_cannot_soft_delete_multiple_others_courses @done (19-07-10 10:28)
+        ✔ courses.delete  => a_user_can_only_permanently_delete_owned_course @done (19-07-10 10:32)
+        ✔ courses.delete  => a_user_can_only_multiple_permanently_delete_owned_courses @done (19-07-10 10:32)
+        ✔ courses.delete  => a_user_cannot_permanently_delete_others_course @done (19-07-10 10:34)
+        ✔ courses.delete  => a_user_cannot_multiple_permanently_delete_others_courses @done (19-07-10 10:34)
+
+* additional feature test:
+    can/cannot publish, unpublish, draft
+        ✔ courses.publish    => a_super_user_can_publish_a_course @done (19-07-10 11:55)
+        ✔ courses.unpublish  => a_super_user_can_unpublish_a_published_course @done (19-07-10 11:55)
+        ✔ courses.draft      => a_super_user_can_draft_course @done (19-07-10 11:55)
+        ✔ courses.publish    => a_user_can_publish_owned_course @done (19-07-10 11:56)
+        ✔ courses.publish    => a_user_cannot_publish_others_course @done (19-07-10 11:58)
+        ✔ courses.unpublish  => a_user_can_unpublish_owned_course @done (19-07-10 12:00)
+        ✔ courses.unpublish  => a_user_cannot_unpublish_others_course @done (19-07-10 12:01)
+        ✔ courses.draft      => a_user_can_draft_owned_course @done (19-07-10 12:02)
+        ✔ courses.draft      => a_user_cannot_draft_others_course @done (19-07-10 12:02)
+--- ✄ -----------------------
+
+SearchCourseTest
+    ☐ a_user_can_search_for_a_course
+    ☐ a_user_can_sort_and_order_the_paginated_list_of_courses
